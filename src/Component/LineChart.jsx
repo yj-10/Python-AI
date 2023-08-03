@@ -1,6 +1,6 @@
 import React from "react";
 import Chart from "chart.js/auto";
-import { Line } from "react-chartjs-2";
+import { Line, PolarArea, Radar } from "react-chartjs-2";
 
 const labels = ["January", "February", "March", "April", "May", "June","july","August","September","October","November","December"];
 
