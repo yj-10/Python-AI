@@ -1,5 +1,7 @@
 import React from "react";
+import { Radar } from "react-chartjs-2";
 import { Col, DatePicker, Row, Slider } from "antd";
+import LineChart from "./Component/LineChart";
 
 const App = () => {
   const marks = {
@@ -28,6 +30,7 @@ const App = () => {
       label: <strong>100</strong>,
     },
   };
+
   return (
     <>
       <div className="Marquee_container">
@@ -71,6 +74,13 @@ const App = () => {
             </Col>
           </Row>
         </div>
+      </div>
+      <div className="table_container">
+        <Row>
+          <Col span={12}>
+            <LineChart />
+          </Col>
+        </Row>
       </div>
     </>
   );
