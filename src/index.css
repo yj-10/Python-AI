@@ -1,5 +1,5 @@
 :root {
-  --bg-color: #00c8ffe3;
+  --bg-color: #03e9f4;
   --black-color: #000;
   --white-color: #fff;
 }
@@ -30,35 +30,31 @@ code {
 }
 .Wrapper .Row_col .Wrapper_Content button {
   display: block;
-  margin: 10px 0px;
-  padding: 10px 35px;
-  font-family: "Times New Roman", Times, serif;
-  color: var(--white-color);
-  border-radius: 25px;
-  border: none;
-  background-color: var(--bg-color);
-
+  margin-top: 30px ;
+  /* padding: 10px 35px; */
+  /* font-family: "Times New Roman", Times, serif; */
+  /* color: var(--white-color); */
+  /* border-radius: 25px; */
+  /* border: none; */
+  /* background-color: var(--bg-color); */
+  padding: 10px 30px;
+  background-color: #ffffff;
+  color: #03e9f4;
+  font-weight: bold;
+  border: 1px solid;
+  border-radius: 5px;
+  letter-spacing: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
   font-size: 20px;
   position: relative;
 }
 .Wrapper .Row_col .Wrapper_Content button:hover {
-  animation-name: button_anime;
-
-  animation-timing-function: ease-in-out;
-  animation-duration: 0.2s;
-
-  transition: all linear 3s;
-}
-
-@keyframes button_anime {
-  0% {
-    transform: scale(1);
-  }
-  80% {
-    opacity: 0;
-
-    transform: scale(1.5);
-  }
+  background: #03e9f4;
+  color: #ffffff;
+  box-shadow: 0 0 5px #03e9f4, 0 0 10px #03e9f4, 0 0 15px #03e9f4,
+    0 0 20px #03e9f4;
 }
 
 .Wrapper .Wrapper_row .Wrapper_title h1 {
@@ -92,7 +88,7 @@ code {
 .Marquee_container {
   width: 100%;
   padding: 10px 0px;
-  background-color: #00c8ffe3;
+  background-color: #03e9f4;
 }
 .Marquee_container marquee {
   color: white;
@@ -105,7 +101,7 @@ code {
   display: block;
   border: 1px solid;
   padding: 10px 0px;
-  margin: 10px;
+  margin-top: 125px;
   position: relative;
   overflow: hidden;
 }
@@ -115,9 +111,14 @@ code {
   animation-name: anime_one;
   /* animation-iteration-count: infinite; */
   animation-timing-function: ease-in-out;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s linear;
 }
 
+.wrpper_table {
+  display: grid;
+  place-items: center;
+  margin-top: 20px;
+}
 @keyframes anime_one {
   0% {
     transform: Scale(0);

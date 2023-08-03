@@ -47,58 +47,72 @@ const App = () => {
           <div className="Wrapper_title">
             <h1 className="">Patient Data</h1>
           </div>
-          <Row gutter={20}>
-            <Col className="Row_col" span={10} offset={2}>
-              <Row>
-                <Col span={24}  >
-                  <div className="Wrapper_Content">
-                    <h1>Pregnancies</h1>
-                    <Slider
-                      marks={marks}
-                      step={""}
-                      id="one"
-                      defaultValue={12}
-                    />
-                  </div>
-                </Col>
-                <Col span={24}>
-                  <div className="Wrapper_Content">
-                    <h1>Blood Pressure</h1>
-                    <Slider marks={marks} step={null} defaultValue={12} />
-                  </div>
-                </Col>
-                <Col span={24}>
-                  <div className="Wrapper_Content">
-                    <h1>Skin THickness</h1>
-                    <Slider marks={marks} step={null} defaultValue={12} />
-                  </div>
-                </Col>
-                <Col span={24}>
-                  <div className="Wrapper_Content">
-                    <h1>Insulin</h1>{" "}
-                    <Slider marks={marks} step={null} defaultValue={12} />
-                  </div>
-                </Col>
-                <Col span={24}>
-                  <div className="Wrapper_Content">
-                    <h1>BMI</h1>{" "}
-                    <Slider marks={marks} step={null} defaultValue={12} />
-                  </div>
-                </Col>
-                <Col span={24}>
-                  <div className="Wrapper_Content">
-                    <button>Submit</button>
-                  </div>
-                </Col>
-              </Row>
-            </Col>
-            <Col className="Row_col" span={10} offset={2}>
-              <TableChart />
-            </Col>
-          </Row>
+
+          <div className="Row_col" span={24}>
+            <Row>
+              <Col span={10} offset={2}>
+                <div className="Wrapper_Content">
+                  <h1>Pregnancies</h1>
+                  <Slider marks={marks} step={""} id="one" defaultValue={12} />
+                </div>
+              </Col>
+
+              <Col span={10} offset={2}>
+                <div className="Wrapper_Content">
+                  <h1>Blood Pressure</h1>
+                  <Slider marks={marks} step={null} defaultValue={12} />
+                </div>
+              </Col>
+              <Col span={10} offset={2}>
+                <div className="Wrapper_Content">
+                  <h1>Skin Thickness</h1>
+                  <Slider marks={marks} step={null} defaultValue={12} />
+                </div>
+              </Col>
+              <Col span={10} offset={2}>
+                <div className="Wrapper_Content">
+                  <h1>Insulin</h1>{" "}
+                  <Slider marks={marks} step={null} defaultValue={12} />
+                </div>
+              </Col>
+              <Col span={10} offset={2}>
+                <div className="Wrapper_Content">
+                  <h1>BMI</h1>{" "}
+                  <Slider marks={marks} step={null} defaultValue={12} />
+                </div>
+              </Col>
+              <Col span={10} offset={2}>
+                <div className="Wrapper_Content">
+                  <h1>glucose</h1>{" "}
+                  <Slider marks={marks} step={null} defaultValue={12} />
+                </div>
+              </Col>
+              <Col span={10} offset={2}>
+                <div className="Wrapper_Content">
+                  <h1> Diabetes pedigree function</h1>{" "}
+                  <Slider marks={marks} step={null} defaultValue={12} />
+                </div>
+              </Col>
+              <Col span={10} offset={2}>
+                <div className="Wrapper_Content">
+                  <h1>Age</h1>{" "}
+                  <Slider marks={marks} step={null} defaultValue={12} />
+                </div>
+              </Col>
+              <Col span={22} offset={2}>
+                <div className="Wrapper_Content">
+                  <button>Submit</button>
+                </div>
+              </Col>
+            </Row>
+          </div>
+
+          <div className="wrpper_table">
+            <TableChart />
+          </div>
         </div>
       </div>
-      <div className="Wrapper_sec_Container">
+      {/* <div className="Wrapper_sec_Container">
         <Row>
           <Col span={12}>
             <LineChart />
@@ -114,7 +128,7 @@ const App = () => {
             </div>
           </Col>
         </Row>
-      </div>
+      </div> */}
     </>
   );
 };
