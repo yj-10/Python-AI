@@ -49,7 +49,7 @@ function TableChart() {
     },
   ];
 
-  return <Table dataSource={dataSource} columns={columns} />;
+  return <Table dataSource={dataSource} columns={columns} pagination={false} />;
 }
 
 export default TableChart;

@@ -7,6 +7,9 @@ import TableChart from "./Component/TableChart";
 import { Typography } from "antd";
 const { Title } = Typography;
 const App = () => {
+  let x = document.getElementById("#one");
+  console.log("X", x);
+
   const marks = {
     0: "0°",
     10: "10",
@@ -44,13 +47,18 @@ const App = () => {
           <div className="Wrapper_title">
             <h1 className="">Patient Data</h1>
           </div>
-          <Row gutter={18}>
-            <Col span={12}>
+          <Row gutter={20}>
+            <Col className="Row_col" span={10} offset={2}>
               <Row>
-                <Col span={24}>
+                <Col span={24}  >
                   <div className="Wrapper_Content">
                     <h1>Pregnancies</h1>
-                    <Slider marks={marks} step={null} defaultValue={12} />
+                    <Slider
+                      marks={marks}
+                      step={""}
+                      id="one"
+                      defaultValue={12}
+                    />
                   </div>
                 </Col>
                 <Col span={24}>
@@ -84,7 +92,7 @@ const App = () => {
                 </Col>
               </Row>
             </Col>
-            <Col span={12}>
+            <Col className="Row_col" span={10} offset={2}>
               <TableChart />
             </Col>
           </Row>
@@ -99,8 +107,8 @@ const App = () => {
             <div className="Result_div">
               <div className="Result_Row">
                 <article>
-                  <Title level={2}>Report</Title>
-                  <Title>You are not Diabetic</Title>
+                  <h3>Report</h3>
+                  <h1>You are not Diabetic</h1>
                 </article>
               </div>
             </div>
