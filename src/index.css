@@ -1,13 +1,63 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.Wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.Wrapper .Wrapper_row {
+  /* width:; */
+  display: grid;
+  place-items: center;
+}
+
+.Wrapper .Wrapper_row .Wrapper_title h1 {
+  transform: capitalize;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  font-size: 23px;
+  color: rgb(232, 0, 0);
+  text-decoration: none;
+
+  animation-duration: 2s;
+  animation-name: anime;
+  /* animation-iteration-count: infinite; */
+  animation-timing-function: ease-in-out;
+
+  transition: all linear 3s;
+}
+@keyframes anime {
+  0% {
+    transform: translate(-100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(50px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+.Marquee_container {
+  width: 100%;
+  padding: 10px 0px;
+  background-color: #00c8ffe3;
+}
+.Marquee_container marquee {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  font-size: 24px;
 }
