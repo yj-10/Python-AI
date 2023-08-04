@@ -13,31 +13,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-.Wrapper {
-  display: block;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-.Wrapper .Wrapper_row {
+
+
+/* .Wrapper .Wrapper_row { */
   /* width:; */
-  display: grid;
-  place-content: center;
+
+/* }/ */
+/* .row_container{
+  display: flex;
+  justify-content: space-around;
 }
 .Wrapper .Row_col .Wrapper_Content button {
   display: block;
-  margin-top: 30px ;
+  margin-top: 30px ; */
   /* padding: 10px 35px; */
   /* font-family: "Times New Roman", Times, serif; */
   /* color: var(--white-color); */
   /* border-radius: 25px; */
   /* border: none; */
   /* background-color: var(--bg-color); */
-  padding: 10px 30px;
+  /* padding: 10px 30px;
   background-color: #ffffff;
   color: #03e9f4;
   font-weight: bold;
@@ -67,23 +62,11 @@ code {
   text-decoration: none;
 
   animation-duration: 2s;
-  animation-name: anime;
+  animation-name: anime; */
   /* animation-iteration-count: infinite; */
-  animation-timing-function: ease-in-out;
+  /* animation-timing-function: ease-in-out;
 
   transition: all linear 3s;
-}
-@keyframes anime {
-  0% {
-    transform: translate(-100px);
-    opacity: 0;
-  }
-  50% {
-    transform: translate(50px);
-  }
-  100% {
-    transform: translate(0px);
-  }
 }
 .Marquee_container {
   width: 100%;
@@ -95,26 +78,26 @@ code {
   font-family: "Times New Roman", Times, serif;
   text-transform: uppercase;
   font-size: 24px;
-}
+} */
 
-.Wrapper_sec_Container {
+/* .Wrapper_sec_Container {
   display: block;
   border: 1px solid;
   padding: 10px 0px;
   margin-top: 125px;
   position: relative;
   overflow: hidden;
-}
+} */
 
-.Row_col {
+/* .Row_col {
   animation-duration: 2s;
-  animation-name: anime_one;
+  animation-name: anime_one; */
   /* animation-iteration-count: infinite; */
-  animation-timing-function: ease-in-out;
+  /* animation-timing-function: ease-in-out;
   transition: all 0.3s linear;
-}
+} */
 
-.wrpper_table {
+/* .wrpper_table {
   display: grid;
   place-items: center;
   margin-top: 20px;
@@ -135,9 +118,9 @@ code {
   position: relative;
 }
 .Result_div .Result_Row article h3 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif; */
   /* font-size: medium; */
-  text-align: start;
+  /* text-align: start;
   font-size: 34px;
   margin-block-start: 0em !important;
   margin-block-end: 0em !important;
@@ -148,4 +131,4 @@ code {
   margin-block-start: 0em;
   margin-block-end: 0em;
   text-align: start;
-}
+} */

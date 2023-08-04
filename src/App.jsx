@@ -1,15 +1,15 @@
-import React from "react";
-
-import { Radar } from "react-chartjs-2";
-import { Col, DatePicker, Row, Slider } from "antd";
-import LineChart from "./Component/LineChart";
+import { Slider } from "antd";
 import TableChart from "./Component/TableChart";
-import { Typography } from "antd";
-const { Title } = Typography;
-const App = () => {
-  let x = document.getElementById("#one");
-  console.log("X", x);
+import "./App.css";
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import infosense from "../src/assest/Infosense.png";
+import LineChart from "./Component/LineChart";
+import Footer from "./Component/Footer";
+import * as mark from "./Component/marksinfo";
+import { BsTelephone } from "react-icons/bs";
 
+function App() {
   const marks = {
     0: "0°",
     10: "10",
@@ -36,101 +36,117 @@ const App = () => {
       label: <strong>100</strong>,
     },
   };
-
   return (
     <>
-      <div className="Marquee_container">
-        <marquee direction="right">Daibeties By Infosense</marquee>
-      </div>
-      <div className="Wrapper">
-        <div className="Wrapper_row">
-          <div className="Wrapper_title">
-            <h1 className="">Patient Data</h1>
-          </div>
-
-          <div className="Row_col" span={24}>
-            <Row>
-              <Col span={10} offset={2}>
-                <div className="Wrapper_Content">
-                  <h1>Pregnancies</h1>
-                  <Slider marks={marks} step={""} id="one" defaultValue={12} />
-                </div>
+      <div className="wrapper">
+        <div className="headers">
+          {" "}
+          <Container>
+            <Row
+              className="d-flex align-items-center"
+              style={{ padding: "10px 0px" }}
+            >
+              <Col lg={8} md={6} sm={12}>
+                <img src={infosense} className="img-fluid w-25" alt="no-img" />
               </Col>
-
-              <Col span={10} offset={2}>
-                <div className="Wrapper_Content">
-                  <h1>Blood Pressure</h1>
-                  <Slider marks={marks} step={null} defaultValue={12} />
-                </div>
-              </Col>
-              <Col span={10} offset={2}>
-                <div className="Wrapper_Content">
-                  <h1>Skin Thickness</h1>
-                  <Slider marks={marks} step={null} defaultValue={12} />
-                </div>
-              </Col>
-              <Col span={10} offset={2}>
-                <div className="Wrapper_Content">
-                  <h1>Insulin</h1>{" "}
-                  <Slider marks={marks} step={null} defaultValue={12} />
-                </div>
-              </Col>
-              <Col span={10} offset={2}>
-                <div className="Wrapper_Content">
-                  <h1>BMI</h1>{" "}
-                  <Slider marks={marks} step={null} defaultValue={12} />
-                </div>
-              </Col>
-              <Col span={10} offset={2}>
-                <div className="Wrapper_Content">
-                  <h1>glucose</h1>{" "}
-                  <Slider marks={marks} step={null} defaultValue={12} />
-                </div>
-              </Col>
-              <Col span={10} offset={2}>
-                <div className="Wrapper_Content">
-                  <h1> Diabetes pedigree function</h1>{" "}
-                  <Slider marks={marks} step={null} defaultValue={12} />
-                </div>
-              </Col>
-              <Col span={10} offset={2}>
-                <div className="Wrapper_Content">
-                  <h1>Age</h1>{" "}
-                  <Slider marks={marks} step={null} defaultValue={12} />
-                </div>
-              </Col>
-              <Col span={22} offset={2}>
-                <div className="Wrapper_Content">
-                  <button>Submit</button>
+              <Col lg={4} md={6} sm={12}>
+                <div style={{ marginTop: "12px" }}>
+                  <p>
+                    <BsTelephone /> Contact Us :- +91 - 9343017165
+                  </p>
                 </div>
               </Col>
             </Row>
-          </div>
+          </Container>
+        </div>
 
-          <div className="wrpper_table">
-            <TableChart />
+        <div className="Marquee_container">
+          <marquee direction="right" className="h6 text-uppercase">
+            diabetes data analytics By Infosense
+          </marquee>
+        </div>
+
+        <Container>
+          <div className="Wrapper_title">
+            <h1 className="text-center">Patient Data</h1>
           </div>
+          <Row className="gx-5 ">
+            <Col className="Row_col   " lg={6} sm={12} md={6}>
+              <div className="Wrapper_Content">
+                <h6>Pregnancies</h6>{" "}
+                <Slider
+                  marks={mark.marks}
+                  step={""}
+                  id="one"
+                  defaultValue={12}
+                />
+              </div>
+              <div className="Wrapper_Content w-50">
+                <h6>Glucose</h6>{" "}
+                <Slider
+                  marks={mark.Glucose}
+                  step={""}
+                  id="one"
+                  defaultValue={12}
+                />
+              </div>
+              <div className="Wrapper_Content">
+                <h6>Blood Pressure</h6>{" "}
+                <Slider marks={marks} step={""} id="one" defaultValue={12} />
+              </div>
+              <div className="Wrapper_Content">
+                <h6>Skin Thikness</h6>{" "}
+                <Slider marks={marks} step={""} id="one" defaultValue={12} />
+              </div>
+            </Col>
+            <Col lg={6} sm={12} md={6} className="Row_col ">
+              <div className="Wrapper_Content">
+                <h6>Insulin</h6>{" "}
+                <Slider marks={marks} step={""} id="one" defaultValue={12} />
+              </div>
+              <div className="Wrapper_Content">
+                <h6>BMI</h6>{" "}
+                <Slider marks={marks} step={""} id="one" defaultValue={12} />
+              </div>
+              <div className="Wrapper_Content">
+                <h6>Age</h6>{" "}
+                <Slider marks={marks} step={""} id="one" defaultValue={12} />
+              </div>
+              <div className="Wrapper_Content">
+                <h6>Diabetes Pedigree Function</h6>{" "}
+                <Slider marks={marks} step={""} id="one" defaultValue={12} />
+              </div>
+            </Col>
+          </Row>
+
+          <div className="div_button my-4">
+            <button>submit</button>
+          </div>
+        </Container>
+        <div className="Wrapper_sec_Container">
+          <Container>
+            <Row className="gx-5 mb-5 ">
+              <Col md={12} sm={12} lg={6}>
+                <TableChart />
+              </Col>
+              <Col md={12} sm={12} lg={6}>
+                <div className="Result_div border">
+                  <div className="Result_Row d-flex justify-content-center align-items-center">
+                    <article>
+                      <h3>Report</h3>
+                      <h1>You are not Diabetic</h1>
+                    </article>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+          </Container>
         </div>
       </div>
-      {/* <div className="Wrapper_sec_Container">
-        <Row>
-          <Col span={12}>
-            <LineChart />
-          </Col>
-          <Col span={12}>
-            <div className="Result_div">
-              <div className="Result_Row">
-                <article>
-                  <h3>Report</h3>
-                  <h1>You are not Diabetic</h1>
-                </article>
-              </div>
-            </div>
-          </Col>
-        </Row>
-      </div> */}
+      {/* Footer */}
+      <Footer />
     </>
   );
-};
+}
 
 export default App;

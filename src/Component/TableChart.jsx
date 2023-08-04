@@ -1,55 +1,33 @@
-import { Table } from "antd";
-import React from "react";
+import Table from "react-bootstrap/Table";
 
 function TableChart() {
-  const dataSource = [
-    {
-      key: "1",
-      name: "Mike",
-      age: 32,
-      address: "10 Downing Street",
-    },
-  ];
-
-  const columns = [
-    {
-      title: "Name",
-      dataIndex: "name",
-      key: "name",
-    },
-    {
-      title: "Age",
-      dataIndex: "age",
-      key: "age",
-    },
-    {
-      title: "Age",
-      dataIndex: "age",
-      key: "age",
-    },
-    {
-      title: "Age",
-      dataIndex: "age",
-      key: "age",
-    },
-    {
-      title: "Age",
-      dataIndex: "age",
-      key: "age",
-    },
-    {
-      title: "Address",
-      dataIndex: "address",
-      key: "address",
-    },
-    {
-      title: "Address",
-      dataIndex: "address",
-      key: "address",
-    },
-  ];
-
-  return <Table dataSource={dataSource} columns={columns} pagination={false} />;
+  return (
+    <Table striped responsive>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th> 
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          
+        </tr>
+      </tbody>
+    </Table>
+  );
 }
 
 export default TableChart;
