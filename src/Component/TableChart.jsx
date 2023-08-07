@@ -2,27 +2,44 @@ import Table from "react-bootstrap/Table";
 
 function TableChart() {
   return (
-    <Table striped responsive>
+    <Table striped responsive bordered>
       <thead>
         <tr>
-          <th>id</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th> 
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th></th>
+          <th>Pregnancies</th>
+          <th>Glucose</th>
+          <th>Blood Pressure</th> 
+          <th>Skin Thikness</th>
+          <th>Insulin</th>
+          <th>BMI</th>
+          <th>Age</th>
+          <th>Diabetes Pedigree </th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>1</td>
+        <td>Mean</td>
           <td>Mark</td>
           <td>Otto</td>
           <td>@mdo</td>
           <td>Mark</td>
+          <td>Mark</td>
+          <td>Mark</td>
+          <td>Mark</td>
+          <td>Otto</td>
+        </tr>
+        <tr>
+        <td>Mean</td>
+          <td>Mark</td>
           <td>Otto</td>
           <td>@mdo</td>
+          <td>Mark</td>
+          <td>Mark</td>
+          <td>Mark</td>
+          <td>Mark</td>
+          <td>Otto</td>
+          
+          
           
         </tr>
       </tbody>
