@@ -28,7 +28,7 @@ function Footer() {
         <Container>
           <Row className="d-flex justify-contnet-between align-items-center">
             <Col sm={12} md={6} lg={6}>
-              <div className="footer_content">
+              <div className="footer_content text-capitalize">
                 Copyright © Infosense ai Pvt. Ltd. {new Date().getFullYear()}{" "}
                 All rights reserved
               </div>
